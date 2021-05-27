@@ -1,14 +1,16 @@
 var closePopup = document.getElementById("popup-exit-btn");
 var popup = document.getElementById("popup-box");
 var requestConsultationBtn = document.getElementById("popup-form-btn");
-var popupSection = document.getElementsByClassName("popup-content-box");
+var popuptextSection = document.getElementById("popup-right-side-section");
+var formBoxSection = document.getElementById("form-box-section");
 
 closePopup.addEventListener("click", function() {
     popup.style.display = "none";
 });
 
 requestConsultationBtn.addEventListener("click", function() {
-    // popupSection.style.left = "300px";
+    popuptextSection.style.display = "none";
+    formBoxSection.style.display = "flex";
 });
 
 

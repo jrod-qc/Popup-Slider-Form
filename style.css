@@ -5,7 +5,7 @@ body {
 }
 
 #popup-box {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -28,6 +28,9 @@ body {
     width: 100%;
     height: 10%;
     background-color: red;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 #popup-exit-btn {
@@ -48,14 +51,23 @@ body {
     color: #242424;
 }
 
+#popup-content-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
+
 .popup-left-side-section,
-.popup-right-side-section {
+#popup-right-side-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: 90%;
+    height: 100%;
 }
 
 .popup-left-side-section {
@@ -81,7 +93,11 @@ body {
     width: 100%;
     text-align: center;
     margin: 0;
-    padding: 0 5%;
+    padding: 1% 5%;
+}
+
+.price-title {
+    font-size: 4em;
 }
 
 .bottom-text-2 {
@@ -120,8 +136,178 @@ body {
     -moz-transition: .5s;
     -ms-transition: .5s;
     -o-transition: .5s;
+    appearance: none;
 }
 
 #popup-form-btn:hover {
     background-color: #bd0303;
+}
+
+#form-box-section {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    height: 90%;
+}
+
+.form-text {
+    width: 80%;
+    text-align: center;
+    margin: 0;
+}
+
+.form-text-2 {
+    text-align: center;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.form-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+.form-box>form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+.form-box>form>input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    appearance: none;
+}
+
+.form-box-btn {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    background-color: #ea252c;
+    border: none;
+    padding: 15px;
+    border-radius: 3px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.form-box-btn:hover {
+    background-color: #bd0303;
+}
+
+.disclosure-text {
+    font-size: .8em;
+}
+
+@media only screen and (max-width:1200px) {
+    .popup-box-wrapper {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .popup-box-wrapper {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:655px) {
+    .popup-box-wrapper {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:425px) {
+    .popup-left-side-section {
+        display: none;
+    }
+    #popup-right-side-section {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.509) url(imgs/SCOTT-MONEY.jpg);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+    .popup-right-side-text-box {
+        width: 100%;
+    }
+    .top-title {
+        color: #fff;
+    }
+    .price-title {
+        color: #fff;
+    }
+    .bottom-text-2,
+    .bottom-text {
+        color: #fff;
+    }
+    #form-box-section {
+        width: 100%;
+    }
+    .popup-box-wrapper {
+        height: 80%;
+    }
+}
+
+@media only screen and (max-height:768px) {
+    .popup-box-wrapper {
+        height: 80%;
+    }
+}
+
+@media only screen and (max-height:414px) {
+    .popup-box-wrapper {
+        height: 95%;
+    }
+    .top-title {
+        font-size: 1em;
+    }
+    .price-title {
+        font-size: 3em;
+    }
+    .bottom-text {
+        font-size: 1.2em;
+    }
+    .bottom-text-2 {
+        font-size: .8em;
+    }
+    .popup-right-side-text-box {
+        width: 84%;
+    }
+    .form-text {
+        font-size: 1.2em;
+    }
+    .form-text-2 {
+        font-size: .7em;
+    }
+    .form-box>form>input {
+        width: 80%;
+        padding: 5px;
+        margin-bottom: 5px;
+        appearance: none;
+    }
+    .form-box-btn {
+        padding: 10px;
+        font-size: .7em;
+    }
 }
